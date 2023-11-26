@@ -157,53 +157,59 @@ body {
 
 /* Estilos para el encabezado y el menú en dispositivos móviles */
 @media (max-width: 768px) {
-  .navbar {
-    display: none;
-    background-color: #333;
-    text-align: center;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-  }
+  /* Estilos generales para pantallas más pequeñas */
 
-  .navbar.active {
-    display: block;
-  }
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    background-color: #333; /* Añade un fondo al menú para mayor visibilidad */
   }
 
   .navbar li {
     margin: 10px 0;
   }
 
-  .navbar a {
-    color: #fff; /* Color de texto para las opciones de menú */
-    font-size: 18px;
-    text-decoration: none;
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Alinea las opciones de menú verticalmente */
   }
 
-  #menu:checked + .navbar {
+  .navbar a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center; /* Centra el texto en las opciones de menú */
+    padding: 10px; /* Añade espacio alrededor del texto para hacer clic más fácilmente */
+  }
+
+  .navbar button {
+    display: block;
+    margin-top: 10px; /* Añade espacio sobre el botón para separarlo del menú */
+  }
+
+  .navbar.active ul {
     display: flex;
   }
 
-  /* Ajustar el tamaño del logo en dispositivos móviles */
+  /* Ajustes de tamaño para imágenes y texto en dispositivos móviles */
+
   .logo-img {
-    max-width: 80px;
+    max-width: 90%; /* Ajusta el tamaño del logo al ancho completo del contenedor */
   }
 
-  /* Ajustar el tamaño de las imágenes en la sección "¿Qué Hacemos?" en dispositivos móviles */
   .about-item img {
-    max-width: 100%; /* Haz que las imágenes ocupen el ancho completo */
+    max-width: 90%;
+    height: auto; /* Asegura que las imágenes mantengan su proporción original */
   }
 
-  /* Ajustar el tamaño de la fuente para el título en la sección "¿Qué Hacemos?" en dispositivos móviles */
-  .about h2 {
+  .about h2,
+  .header-content h1 {
     font-size: 20px;
   }
+}
 
   /* Ajustar el tamaño de la fuente para el título en la sección de bienvenida en dispositivos móviles */
   .header-content h1 {
